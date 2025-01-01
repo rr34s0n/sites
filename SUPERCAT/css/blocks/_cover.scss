@@ -1,0 +1,151 @@
+// for phone
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 62.5%;
+    z-index: -2;
+    top: 0px;
+
+    background-image: linear-gradient(to top, rgba(43, 109, 194, 0.85), rgba(43, 109, 194, 0.85)), url("../img/background-phone.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &-bg-phone {
+    width: 100%;
+    padding: 0 20px;
+  }
+  &-title {
+    color: white;
+    font-size: 36px;
+    font-weight: 400;
+    padding: 27px 0;
+  }
+  &-description {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &-photo {
+    width: 280px;
+    height: 62.5%;
+    padding-top: 30px;
+  }
+  &-btn {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border: 10px solid $basic-blue;
+    background-color: $basic-blue;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// for tablet
+@media (min-width: $tablet-size) {
+  .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    align-content: center;
+    position: relative;
+    padding-left: 120px;
+    &-bg-phone {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+    &::before {
+      display: none;
+    }
+    &-title {
+      color: black;
+      font-size: 60px;
+      line-height: 60px;
+    }
+    &-description {
+      color: black;
+      font-size: 20px;
+      padding-bottom: 27px;
+    }
+    &-photo {
+      width: 709px;
+      position: relative;
+      order: 1;
+      z-index: -1;
+      bottom: 100px;
+      right: 80px;
+    }
+    &-btn {
+      color: white;
+      font-size: 20px;
+      width: 224px;
+      text-align: center;
+    }
+  }
+}
+
+// for desktop
+@media (min-width: $desktop-size) {
+  .cover {
+    padding-left: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50%;
+      right: 0px;
+
+      background-image: linear-gradient(to top, rgba(43, 109, 194, 0.85), rgba(43, 109, 194, 0.85)), url("../img/background-desktop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center left;
+    }
+    &-bg-phone {
+      padding: 150px 0;
+      width: 1220px;
+    }
+    &-photo {
+      width: 709px;
+      bottom: 350px;
+      right: -450px;
+    }
+    &-title {
+      color: black;
+      font-size: 60px;
+      padding-top: 50px;
+      padding-left: 60px;
+    }
+    &-description {
+      color: black;
+      font-size: 20px;
+      padding-left: 60px;
+    }
+    &-photo {
+      width: 552px;
+      height: 62.5%;
+      padding-top: 30px;
+    }
+    &-btn {
+      color: white;
+      font-size: 20px;
+      margin-left: 60px;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+// for phone
+.map {
+  padding-top: 55px;
+  &-text {
+    display: flex;
+    text-align: left;
+    padding: 27px 20px;
+    &-invite {
+      font-size: 16px;
+      font-weight: 400;
+      width: 50%;
+    }
+    &-address {
+      font-size: 14px;
+      font-weight: 400;
+      font-family: 'Open Sans', serif;
+      color: #444444;
+      width: 50%;
+    }
+  }
+}
+
+// for tablet
+@media (min-width: $tablet-size) {
+  .map {
+    &-text {
+      justify-content: space-between;
+      align-items: center;
+      &-invite {
+        font-size: 20px;
+        width: auto;
+      }
+      &-address {
+        font-size: 16px;
+        width: auto;
+        text-align: right;
+      }
+    }
+  }
+}
+
+// for desktop
+@media (min-width: $desktop-size) {
+  .map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-container {
+      width: 1220px;
+      position: relative;
+      justify-content: center;
+    }
+    &-text {
+      background-color: white;
+      width: 570px;
+      height: 200px;
+      position: absolute;
+      z-index: 1;
+      top: 55px;
+      &-invite {
+        padding: 59px 0 59px 76px;
+      }
+      &-address {
+        text-align: left;
+        padding: 59px 76px;
+      }
+    }
+  }
+}

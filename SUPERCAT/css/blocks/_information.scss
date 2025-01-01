@@ -1,0 +1,139 @@
+// for phone
+.information {
+  &-title {
+    font-size: 36px;
+    font-weight: 400;
+    padding: 5px 20px 40px 20px;
+  }
+  &-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    li {
+      padding: 0 20px;
+      display: flex;
+      gap: 20px;
+    }
+  }
+  &-block-photo {
+    div {
+      background-color: $basic-blue;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &-block-description {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', serif;
+    color: #444444;
+  }
+}
+
+// for tablet
+@media (min-width: $tablet-size) {
+  .information {
+    &-title {
+      font-size: 60px;
+    }
+    &-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 750px;
+      li {
+        width: 280px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        counter-increment: feature;
+        &::before {
+        content:counter(feature);
+        align-items: center;
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: -40px;
+        right: 10px;
+        z-index: -1;
+        color: rgb(242, 242, 242);
+        font-size: 280px;
+        font-weight: 400;
+        line-height: 280px;
+      }
+      }
+    }
+    &-block-photo {
+      div {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    &-block-description {
+      font-size: 16px;
+    }
+  }
+}
+
+// for desktop
+@media (min-width: $desktop-size) {
+  .information {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    &-wrapper {
+      width: 1220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-title {
+      font-size: 60px;
+      padding-left: 0;
+    }
+    &-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1220px;
+      li {
+        padding: 0;
+        width: 250px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        counter-increment: feature;
+        &::before {
+        content:counter(feature);
+        align-items: center;
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: -40px;
+        right: 10px;
+        z-index: -1;
+        color: rgb(242, 242, 242);
+        font-size: 280px;
+        font-weight: 400;
+        line-height: 280px;
+      }
+      }
+    }
+    &-block-photo {
+      div {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    &-block-description {
+      font-size: 16px;
+    }
+  }
+}

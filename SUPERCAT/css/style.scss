@@ -1,0 +1,13 @@
+@import 'blocks/globals';
+@import 'blocks/menu';
+@import 'blocks/cover';
+@import 'blocks/catalog';
+@import 'blocks/information';
+@import 'blocks/map';
+@import 'blocks/contacts';
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Oswald", serif;
+}
